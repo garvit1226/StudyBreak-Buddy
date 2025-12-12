@@ -1,7 +1,8 @@
 
-
+let studySeconds = prompt("Enter the timer in minutes! ")
 // 45 minutes in seconds
-let studySeconds = 10;
+
+studySeconds = studySeconds*60;
 // for testing we had put 10secs
 
 const display = document.getElementById("study-timer");
@@ -37,3 +38,4 @@ exitBtn.addEventListener("click", () => {
     window.location.href = "index.html";
   }
 });
+
