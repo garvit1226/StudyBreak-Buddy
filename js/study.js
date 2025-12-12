@@ -1,10 +1,13 @@
 
+
+// taking time from user
 let studySeconds = prompt("Enter the timer in minutes! ")
-// 45 minutes in seconds
 
+// text edited as input
+document.querySelector("#focus_timer").innerText = studySeconds;
+
+// minutes to seconds
 studySeconds = studySeconds*60;
-// for testing we had put 10secs
-
 const display = document.getElementById("study-timer");
 const statusText = document.getElementById("study-status");
 const exitBtn = document.getElementById("exit-btn");
@@ -32,10 +35,11 @@ if (studySeconds <= 0) {
 
 }, 1000);
 
+
+
 exitBtn.addEventListener("click", () => {
   const sure = confirm("Are you sure you want to exit this focus session?");
   if (sure) {
     window.location.href = "index.html";
   }
 });
-
